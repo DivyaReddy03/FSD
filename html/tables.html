@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Tables</title>
+        <style type="text/css">
+            table,tr,th,td{
+                border:2px solid black;
+            
+            }
+            
+
+        
+            .hover{
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        <table >
+            <tbody > 
+                <tr>
+                    <th >Name</th>
+                    <td ><input type="text" name="name" placeholder="Enter your Name"/></td>
+                </tr>
+                <tr>
+                    <th >Email</th>
+                    <td ><input type="mail" name="mail" placeholder="ex:xyz@gmail.com"/></td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td><input type="number" name="mobile" placeholder="Enter valid mobile number"/></td>
+                </tr>
+                <tr >
+                    <td class="hover"colspan="2" style="text-align:center">
+                        <input type="button" name="save" value="Save"/>
+                    <input type="button" name="reset" value="Reset"/>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

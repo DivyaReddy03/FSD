@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <svg>
+            <circle cx="100" cy="100" r="50" fill="green" stroke="blue"></circle>
+            <text x="80" y="75">Hello</text>
+        </svg>
+        <svg>
+            <rect x="0" y="0" width="200" height="100"></rect>
+            <rect x="10" y="10" width="50" height="50" fill="red">
+            <animate attributeType="XML" attributeName="x" from="-50" to="100" dur="10s" repeatCount="indefinite"/> 
+        </rect>
+    </svg>
+    <svg>
+        <defs>
+<linearGradient id="grad-rect">
+    <stop offset="5%" stop-color="blue"/>
+    <stop offset="95%" stop-color="grey"/>
+</linearGradient>
+</defs>
+<rect x="100" y="100" width="200" height="100" fill="url(#grad-rect)"></rect>
+        </svg>
+    </body>
+</html>
