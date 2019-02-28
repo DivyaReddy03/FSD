@@ -1,0 +1,123 @@
+<html>
+    <head>
+            <script type="text/javascript"> 
+            //alert('Hello');
+            document.write('Hello JavaScript');//print statement
+            var msg='Divya';
+            document.write(msg);
+            document.write('<br/>')
+
+            msg=10;
+            document.write(msg);
+            document.write(msg);
+
+            document.write('<br/>')
+
+            //ecma style variable declaration
+            let data=12+2;
+            document.write(data);
+            document.write('<br/>')
+
+            const pi=3.14;
+            document.write('pi is'+' '+pi)
+            document.write('<br/>')
+            document.write(`data is ${data}`);
+            document.write('<br/>');
+            //write to console
+            console.log('just checking the logs');
+
+            //conditional Statements
+            let x=10;
+            let y=23;
+            if(x>y){
+                console.log('x is greater');
+            }
+            else{
+                console.log('y is greater');
+            }
+            //switch cases
+            const condition =5;
+            switch(condition)
+            {
+                case 1:
+                console.log('case1');
+                break;
+                case 2:console.log('case2');
+                default://incase none of the conditions are met
+                console.log('default');
+            }
+            //switch cases for string
+            const browser='Safari';
+            switch(browser)
+            {
+                case 'Safari':
+                console.log('safari');
+                break;
+                case 'chrome':console.log('chrome');
+                default://incase none of the conditions are met
+                console.log('default browser');
+            }
+            //loops
+            //for loop
+            //while loop
+            //do while
+            //for in loop
+            /*for loop*/
+           // for(intialization, condition, expression)
+           for(counter=0; counter<5; counter++)
+           {
+               console.log(`counter is ${counter}`);
+           }
+           //while loop
+           /*initialization happens here
+           while(condition){
+               expression;
+           }*/
+           counter=0;
+           while(counter<5)
+           {
+               console.log(`while loop ${counter}`)
+               counter=counter+2;
+           }
+           //do while
+           counter=0;
+           do{
+            console.log(`do while loop ${counter}`);
+            counter=counter+2;
+           }
+           while(counter<1)
+           {
+
+           }
+           //conditional exits
+           for(counter=5; counter>0; counter--)
+           {
+               if(counter%2==0)
+               {
+                   continue;
+                // console.log(`skip`);
+               }
+               console.log(`for loop decrement, counter ${counter}`);
+           }
+           //break
+           for(counter=0; counter<5; counter++)
+        
+           {
+            if(counter==4)
+            {
+                break;
+            }
+            console.log(`for loop break, ${counter}`);
+           }
+              </script>
+
+             <title>
+ Hello, Welcome to javascript
+    </title>
+</head>
+<body>
+    <div>
+        Hello welcome to javascript
+    </div>
+</body>
+</html>

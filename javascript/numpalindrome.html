@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        num=343;
+         temp=parseInt(num);
+         rev=1;
+         while(num>0)  
+         {
+             rem=parseInt(num%10);
+             rev=parseInt(rev*10+rem);
+             num=parseInt(num/10);
+         }    
+         if(rev==temp)
+         {
+             console.log(`${temp} is a palindrome`);
+         }
+         else{
+             console.log(`${temp} is not a palindrome`);            
+         }
+                </script>
+
+    </head>
+</html>

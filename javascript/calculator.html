@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <!--<script src="calculator.js" type="text/javascript"></script>-->
+        <script>
+            function dsp(val){
+    document.getElementById("result").value+=val;
+
+}
+function calculate()
+{
+    let x=document.getElementById("result").value;
+    let y=eval(x);
+    document.getElementById("result").value=y;
+
+}
+function clr()
+{
+    document.getElementById("result").value="";
+}
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="display"/><br>
+            
+            <input type="button" value="1" onclick="dsp(1)"/>
+            <input type="button" value="2" onclick="dsp(2)"/>
+            <input type="button" value="3" onclick="dsp(3)"/>
+            <input type="button" value="+" onclick="dsp('+')"/><br>
+           
+             <input type="button" value="4" onclick="dsp(4)"/>
+            <input type="button" value="5" onclick="dsp(5)"/>
+            <input type="button" value="6" onclick="dsp(6)"/>
+            <input type="button" value="-" onclick="dsp('-')"/><br>
+            
+            <input type="button" value="7" onclick="dsp(7)"/>
+            <input type="button" value="8" onclick="dsp(8)"/>
+            <input type="button" value="9" onclick="dsp(9)"/>
+            <input type="button" value="*" onclick="dsp('*')"/><br>
+            
+             <input type="button" value="0" onclick="dsp(0)"/>
+            <input type="button" value="clr" onclick="clr()"/>
+            <input type="button" value="=" onclick="calculate()"/>
+            <input type="button" value="%" onclick="dsp('%')"/>
+
+           
+
+
+        
+    </div>
+    </body>
+</html>
