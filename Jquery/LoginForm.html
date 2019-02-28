@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            Login | Jquery
+        </title>
+        <!--<link rel="stylesheet" href='style.css'></link>-->
+        <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+        <script type="text/javascript" src="login.js"></script>
+    </head>
+    <header>
+        <h2>Login </h2>
+    </header>
+    <body>
+        <div id='login-form-content'>
+            <div id='error-message'></div>
+            <form action="Welcome.html" method="post">
+                <input type="text" id='username' placeholder="Username.." class='input' value=""/>
+                <input type="password" id='password' placeholder="Password.." class='input' value=""/>
+                <input type="submit" id='login' value="Login"/>
+            </form>
+        </div>
+    </body>
+</html>
+<style>
+#login-form-content{
+    
+    background-color: rgb(245,245,220,0.3);
+    width: 40%;
+    border: 1px solid rgb(169,169,211);
+    border-radius: 2px;
+    padding: 5 5 5 5px;
+    text-align: center;
+}
+.input{
+    display: block;
+}
+.input{
+    border: 1px solid purple;
+    border-radius: 2px;
+    margin: 5 2 5 2px;
+    height: 4em;
+    width: 15em;
+}
+.input[type=submit]{
+    width: 26em;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: ghostwhite;
+}
+.input-error{
+    border-color: red;
+}
+#error-message{
+    color: red;
+}
+
+</style>
