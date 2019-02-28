@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+       <title>
+            Hello | Boostrap
+        </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script type='text/javascript' src='jquery3.js'></script>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js'></script>
+        <script type="text/javascript" src="jquery2.js"></script>
+
+        </head>
+        <body >
+            <nav class='navbar  bg-dark '>
+                <ul class="nav nav-tabs ">
+                <li class="nav-item active ">
+                <a class="nav-link text-light "data-toggle="tab" href="#home">Home</a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link text-light"data-toggle="tab" href="#signup">SignUp</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-light" data-toggle="tab"href="#login">Login</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-light" href="#contactus">Contact US</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link text-dark  glyphicon glyphicon-menu" href="#" id="navbardrop" data-toggle="dropdown">    
+                </a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item data-toggle='tab'" href="#products">Products</a>
+                <a class="dropdown-item data-toggle='tab'" href="#deals">Deals</a>
+                <a class="dropdown-item data-toggle='tab'" href="#offers">Offers</a>
+                </div>
+                </li>
+                </ul>
+                              
+                <form class='form-inline navbar-toggle navbar-toggler-right'>
+                                
+                <input class="form-control mr-sm-2" id="Search"  type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+                </form>
+                </nav>
+                <div class="container tab-content ">
+                <div id="home" class=" container tab-pane fade col-sm-3 offset-4"><br>
+                <h1 class="offset-4">Welcome</h1><br> 
+                            </div>
+                        <div id="login" class=" container tab-pane fade col-sm-3 offset-4"><br>
+                            <h1 class="offset-4">LogIn</h1><br>
+                            <div id="login-form">
+                                <form action="" class="form-group">
+                                    <input class="form-control"type="text" placeholder="emailid/phone"id="loginid"><br>
+                                    <input class="form-control"type="password" placeholder="password"id="password"><br>
+                                    <input class="form-control btn btn-primary"type="submit" value="Login"id="loginbtn"><br>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="signup" class=" container tab-pane fade col-sm-4 offset-4">
+                            <h1 class="offset-4">Sign Up</h1>
+                        <div class='form-group'>
+                                <form id="form-registration">
+                                <label for='name'>Name</label>
+                                <input type='text' class='form-control' id='name' name='name'/>
+                                <label for='email'>Email</label>
+                                <input type='email' class='form-control' id='email' name='email'/>
+                                <label for='phone'>Phone</label>
+                                <input type='number' class='form-control' id='phone' name='phone'/>
+                                <label for='pass'>Password</label>
+                                <input type='password' class='form-control' id='password' name='password'/>
+                                <label for='gender'>Gender</label>
+                                <select class='form-control'id="gender"> 
+                                <option value='-1'>-select-</option>
+                                <option value='0'>Male</option>
+                                <option value='1'>Female</option>
+                                </select>
+                                <input type="submit" class='btn btn-primary' value='Save'id="save"/>
+                                <input type="reset" class='btn btn-warning' value='Refresh'id="refresh"/>
+                                </form>
+                        </div>     
+                        </div>
+                        </div>
+        <!--Carousel!!!!-->
+        <!-- The slideshow -->
+    <div></div>
+  
+    
+        
+        <ul class="breadcrumb fixed-bottom bg-dark">
+                <li class="breadcrumb-item text-light">Home</li>
+                <li class="breadcrumb-item text-light">SignUp</li>
+                <li class="breadcrumb-item text-light">Login</li>
+                <li class="breadcrumb-item text-light">About Us</li>
+                
+              </ul>
+         
+        </div>
+        </body>
+        </html>
+        <style>
+        h1{
+            color:crimson;
+        }
+        #form{
+            border:1px solid coral;
+            align-content: center;
+            padding:5px;
+
+        }
+        .form-group, .container{
+            border:none;
+            
+        }
+        #search{
+            float: right;
+        }
+        nav{
+            list-style-type:none;
+        }
+        .body{
+            overflow:scroll;
+        }
+        </style>

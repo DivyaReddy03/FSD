@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+       <title>
+            Card | Boostrap
+        </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script type='text/javascript' src='jquery3.js'></script>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js'></script>
+        <script type="text/javascript" src="jquery2.js"></script>
+        <script>
+            $(document).ready(()=>{
+                let user=localStorage.getItem('name');
+                let mail=localStorage.getItem('email');
+                $('#content').html('username:'+user+"<br>"+'email:'+mail);
+                //$('#name').val()=localStorage.getItem('name');
+                //$('#mail').val()=localStorage.getItem('email');
+                //$('#phone').val()=localStorage.getItem('phone');
+                //$('#gender').val()=localStorage.getItem('gender');
+
+
+            });
+        </script>
+        </head>
+        <body>
+         <center><div class="col-4 offset-4 card">
+                    <div class="card-columns">
+                        <div class="card"id="img">
+                        <div class="card-body">
+                            <div class="card-image">
+                                <img src="img_avatar1.png" alt="card-image" style="width:100%">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card" id="info">
+                            <div class="card-body">
+                            <p class='card-text' id='content'></p>
+                        </div>
+                        </div>
+                    </div>             
+         </div>
+        </center>
+</body>
+</html>
+<style>
+.card{
+    margin:10px
+    
+}
+#img{
+    width:100%
+}
+#info{
+    width:100%;
+}
+</style>
