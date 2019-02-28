@@ -1,0 +1,48 @@
+<h1>Calculator</h1>
+  <div>
+    <table class="center">
+  <tr>
+    <th>
+      Number1
+    </th>
+    <th>
+      Number2
+    </th>
+    <th>
+      Sum
+    </th>
+    <th>
+      Difference
+    </th>
+    <th>
+      Product
+    </th>
+    
+    <th>
+      Division
+      </th>
+  </tr>
+  <tr *ngFor="let u of data">
+      <td>
+          {{u.number1}}
+        </td>
+        <td>
+          {{u.number2}}
+        </td>
+        <td>
+          {{u.sum}}
+        </td>
+        <td>
+          {{u.diff}}
+        </td>
+        <td>
+          {{u.mul}}
+        </td>
+        <td>
+          {{u.div}}
+        </td>
+  </tr>
+</table>
+
+</div>
+

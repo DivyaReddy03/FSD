@@ -1,0 +1,36 @@
+
+h1{
+color: crimson;
+text-align: center;
+
+}
+div{
+align-content: center;
+}
+table{
+    color:crimson;
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+
+}
+th{
+    border:1px solid black;
+    border-collapse: collapse;
+
+}
+tr{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+td{
+    text-align: center;
+    border:1px solid black;
+    border-collapse:collapse;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
