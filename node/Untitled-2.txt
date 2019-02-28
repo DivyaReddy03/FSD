@@ -1,0 +1,84 @@
+use EMPLOYEES
+db.createCollection("EmpData");
+db.emp.insertMany(
+    [
+        {
+            empId:121,
+            eName:"Jhon",
+            salary:50000,
+            designation:"Associate Sys Engineer",
+            project:{
+                pId:"FMS2019",
+                pName:"Fix My'Ship"
+                    }
+        },
+        {
+            empId:122,
+            eName:"Barb",
+            salary:40000,
+            designation:"Manager",
+            project:{
+                pId:"DIY2019",
+                pName:"DIY Popups"
+                 }
+        },
+        {
+            empId:123,
+            eName:"Jessica",
+            salary:100000,
+            designation:"Project Manager",
+            project:{
+                pId:"FMS2019",
+                pName:"Fix My'Ship"
+            }
+        },
+        {
+            empId:124,
+            eName:"Dev",
+            salary:60000,
+            designation:"Associate Sys Engineer",
+            project:{
+                pId:"GA2019",
+                pName:"Grill Any where"
+            }
+        },
+        {
+            empId:125,
+            eName:"Cristopher",
+            salary:25000,
+            designation:"Associate Sys Engineer"
+
+            
+        },
+        {
+            empId:126,
+            eName:"Kaya",
+            salary:30000,
+            designation:"Associate Sys Engineer"
+            
+        }
+        
+
+    ]
+);
+db.emp.find({"designation":"Manager"},{_id:0}).pretty();
+db.emp.find({"project.pId":"FMS2019"},{_id:0}).pretty();
+db.emp.find({salary:{$gt:50000}}).pretty();
+db.emp.find(
+    {
+        $and:[{
+            salary:{$gt:10000},salary:{$lt:50000}}]},
+    {_id:0}).pretty();
+
+
+db.emp.find({},{_id:0}).sort({salary:1}).pretty();
+
+
+db.empdata.insertMany([
+    {empId:"121", eName:"Vedha", salary:45000, pId:"DIY2019"},
+    {empId:"122", eName:"Bindu", salary:35000, pId:"GA2019"},
+    {empId:"123", eName:"Pallavi", salary:55000, pId:"FMS2019"},
+    {empId:"124", eName:"Lakshmi", salary:38000, pId:"DIY2019"},
+    {empId:"125", eName:"Lavanya", salary:46000, pId:"GA2019"},
+    {empId:"126", eName:"Bhavani", salary:60000, pId:"FMS2019"},
+    ])
