@@ -1,0 +1,120 @@
+package com.jdbc.examples;
+
+
+//STEP 1. Import required packages
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class JdbcWithDriverManagerEx {
+	// JDBC driver name and database URL
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:mysql://localhost/jdbctraining";
+
+	// Database credentials
+	static final String USER = "root";
+	static final String PASS = "pass@word1";
+
+	public static void main(String[] args) {
+
+		Connection conn = null;
+		Statement stmt = null;
+		try {
+			// STEP 2: Register JDBC driver
+			Class.forName("com.mysql.jdbc.Driver");
+
+			// STEP 3: Open a connection
+			System.out.println("Connecting to database...");
+			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+			// STEP 4: Execute a query
+			System.out.println("Creating statement...");
+			stmt = conn.createStatement();
+
+			String sql1, sql2, sql3, sql4;
+			sql1 = "SELECT id, name, age, designation FROM employee";
+//			 sql1 = "SELECT id, name, age FROM employee WHERE age >= 35 AND department='Admin' ORDER BY name";
+			sql2 = "UPDATE employee SET designation=? WHERE id=?";
+			//sql3="insert into employee values(4,'Jay',24,'Acountant','GBS','India')";
+			sql4="insert into employee values(?, ?, ?, ?, ?, ? )";
+			
+
+			//stmt.executeUpdate(sql3);
+			//System.out.println("1 row inserted");
+			PreparedStatement pstmt = conn.prepareStatement(sql4);
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter employee id:");
+			pstmt.setInt(1,sc.nextInt());
+			System.out.println("Enter name:");
+			pstmt.setString(2, sc.next());
+			System.out.println("Enter age:");
+			pstmt.setInt(3, sc.nextInt());
+			System.out.println("Enter designation:");
+			pstmt.setString(4,sc.next());
+			System.out.println("Enter dpartment:");
+			pstmt.setString(5,sc.next());
+			System.out.println("Enter country:");
+			pstmt.setString(6,sc.next());
+
+			//PreparedStatement pstmt1 = conn.prepareStatement(sql4);
+
+			boolean status1 = pstmt.execute();
+			System.out.println("1 row inserted");
+			pstmt=conn.prepareStatement(sql2);
+			System.out.println("Enter designation to update:");			
+			pstmt.setString(1, sc.next());
+			System.out.println("Enter id of employee: ");
+			pstmt.setInt(2, sc.nextInt());
+			pstmt.execute();
+		boolean status = stmt.execute(sql2);
+			System.out.println("Update status: " + status);
+			ResultSet rs = stmt.executeQuery(sql1);
+
+			// STEP 5: Extract data from result set
+			while (rs.next()) {
+				// Retrieve by column name
+				int id = rs.getInt("id");
+				int age = rs.getInt("age");
+				String name = rs.getString("name");
+				String designation = rs.getString("designation");
+
+				// Display values
+				System.out.print("ID: " + id);
+				System.out.print(", Age: " + age);
+				System.out.print(", Name: " + name);
+				System.out.print(", Designation: " + designation);
+
+				System.out.println();
+			}
+			// STEP 6: Clean-up environment
+			rs.close();
+			stmt.close();
+			conn.close();
+		} catch (SQLException se) {
+			// Handle errors for JDBC
+			se.printStackTrace();
+		} catch (Exception e) {
+			// Handle errors for Class.forName
+			e.printStackTrace();
+		} finally {
+			// finally block used to close resources
+			try {
+				if (stmt != null)
+					stmt.close();
+			} catch (SQLException se2) {
+			} // nothing we can do
+			try {
+				if (conn != null)
+					conn.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			} // end finally try
+		} // end try
+		System.out.println("Goodbye!");
+	}// end main
+}// end FirstExample
+

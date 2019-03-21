@@ -1,0 +1,15 @@
+package com.java.spring;
+
+public class Greetings {
+	private String messaage= " Spring Hello World";
+
+	public String getMessaage() {
+		return messaage;
+	}
+
+	public void setMessaage(String messaage) {
+		this.messaage = messaage;
+	}
+	
+
+}

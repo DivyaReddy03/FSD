@@ -1,0 +1,28 @@
+package com.java.examples;
+
+
+import java.io.*;
+
+import com.example.core.oops.Employees1;
+
+public class SerializeEx {
+
+	public static void main(String[] args) {
+		Employees e = new Employees();
+		e.name = "Reyan Ali";
+		e.address = "Phokka Kuan, Ambehta Peer";
+		e.SSN = 11122333;
+		e.id = 101;
+
+		try {
+			FileOutputStream fileOut = new FileOutputStream("C:\\java-programs\\fileoutexample.txt");
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+			out.writeObject(e.toString());
+			out.close();
+			fileOut.close();
+			System.out.printf("Serialized data is saved in C:\\\\java-programs\\\\fileoutexample.txt");
+		} catch (IOException i) {
+			i.printStackTrace();
+		}
+	}
+}

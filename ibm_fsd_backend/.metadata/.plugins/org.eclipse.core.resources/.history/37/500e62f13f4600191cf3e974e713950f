@@ -1,0 +1,9 @@
+package com.java.examples;
+
+public class Employees {
+	String name;
+	String address;
+	int SSN;
+	int id;
+
+}

@@ -1,0 +1,15 @@
+
+public class DetailsOfEmployee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employees1 emp1= new Employees1("Divya", "OO9DG", 3456789, "GBS");
+		Employees1 emp1= new Employees1("Deepthi", "OO6CG", 3445689, "GBC");
+		Employees1 emp1= new Employees1("Keerthi", "O0975G", 3456789, "GTS");
+		Employees1 emp1= new Employees1("Preethi", "O309jh", 765432, "L&K");
+
+		
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package com.java.examples.RAPI;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
+public class ReflectionEx {
+	
+	public static void main(String[] args) {
+		try {
+			Class<?> c=Calc.class;
+			System.out.println(c);
+			Constructor<?> consrt = c.getConstructor();
+			System.out.println(consrt);
+			Object obj=consrt.newInstance();
+			
+			Method add = c.getMethod("add", Integer.class);
+			add.invoke(obj, 2,8);
+			
+			
+			
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

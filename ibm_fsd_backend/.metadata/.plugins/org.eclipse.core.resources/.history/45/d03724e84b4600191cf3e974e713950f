@@ -1,0 +1,21 @@
+package com.java.threadexamples;
+
+public class ThreadEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Thread Lifecycle Demo");
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error:"+ e.getMessage());
+			e.printStackTrace();
+		}
+		System.out.println("Thread woke up");
+		System.out.println(Thread.currentThread().getName());
+
+	}
+
+}

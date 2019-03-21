@@ -1,0 +1,28 @@
+package com.java.examples.RAPI;
+
+public class ReflectionEx {
+	
+	public static void main(String[] args) {
+		try {
+			Class<?> c=Calc.class;
+			System.out.println(c);
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

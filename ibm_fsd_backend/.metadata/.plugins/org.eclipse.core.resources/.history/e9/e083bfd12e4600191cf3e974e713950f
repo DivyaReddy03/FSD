@@ -1,0 +1,33 @@
+package com.java.examples;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileExample1 {
+	public static void main(String[] args) throws IOException
+	{
+		FileInputStream in=null;
+		FileOutputStream out=null;
+		try {
+			in=new FileInputStream("C:\\java-programs\\fileexample.txt");
+			out=new FileOutStream("C;\\java-programs\\fileoutexample.txt");
+			int c;
+			while((c=in.read())!=-1)
+			{
+				System.out.println((char)c);
+				out.write(c);
+					
+				}
+			System.out.println("Copied Successfully");
+		}catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}
